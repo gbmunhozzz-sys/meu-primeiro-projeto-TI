@@ -2,13 +2,14 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        // Declara uma variavel do tipo int e atribui um valor
-        int numeroInt = 42;
+                // 1. Declara a variável double com valor fracionado
+                double valorDecimal = 9.99;
 
-        // Ocorre o casting implicito (promocao automatica de int para double)
-        double numeroDouble = numeroInt;
+                // 2. Casting explícito (força a conversão de double para int)
+                int valorInteiro = (int) valorDecimal;
 
-        // Exibe o valor da variavel double no console
-        System.out.println("Valor em double: " + numeroDouble);
+                // 3. Exibe ambos os valores no console
+                System.out.println("Valor em double: " + valorDecimal);
+                System.out.println("Valor em int (após casting): " + valorInteiro);
     }
 }
