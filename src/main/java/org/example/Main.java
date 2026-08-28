@@ -2,14 +2,18 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-                // 1. Declara a variável double com valor fracionado
-                double valorDecimal = 9.99;
+                // 1. Variável float com valor fracionado (o 'f' no final indica que é um float)
+                float valorFloat = 123.75f;
 
-                // 2. Casting explícito (força a conversão de double para int)
-                int valorInteiro = (int) valorDecimal;
+                // 2. Casting Explícito: float -> long (ocorre truncagem, perde a parte decimal)
+                long valorLong = (long) valorFloat;
 
-                // 3. Exibe ambos os valores no console
-                System.out.println("Valor em double: " + valorDecimal);
-                System.out.println("Valor em int (após casting): " + valorInteiro);
+                // 3. Casting Implícito: long -> double (promovido automaticamente para decimal)
+                double valorDouble = valorLong;
+
+                // Exibe todos os valores no console
+                System.out.println("Valor Float: " + valorFloat);
+                System.out.println("Valor Long (Casting Explícito): " + valorLong);
+                System.out.println("Valor Double (Casting Implícito): " + valorDouble);
     }
 }
